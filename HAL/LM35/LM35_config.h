@@ -1,0 +1,25 @@
+/*
+ * LM35_config.h
+ *
+ * Created: 6/30/2024 8:01:54 PM
+ *  Author :  D52
+ */ 
+
+
+#ifndef LM35_CONFIG_H_
+#define LM35_CONFIG_H_
+
+#define LM35_FEEDBACK_PORT   DIO_PORTA
+#define LM35_FEEDBACK0_PIN   DIO_PIN0
+#define LM35_FEEDBACK1_PIN   DIO_PIN1
+#define LM35_FEEDBACK2_PIN   DIO_PIN2
+#define LM35_FEEDBACK3_PIN   DIO_PIN3
+#define LM35_FEEDBACK4_PIN   DIO_PIN4
+#define LM35_FEEDBACK5_PIN   DIO_PIN5
+#define LM35_FEEDBACK6_PIN   DIO_PIN6
+#define LM35_FEEDBACK7_PIN   DIO_PIN7
+
+
+
+
+#endif /* LM35_CONFIG_H_ */

@@ -57,9 +57,7 @@ static void SS_voidSelectEmptySlot(users *copy_tUser);
 static void SS_voidDeleteUser();
 static void SS_voidChangePassword();
 
-void SS_voidIsAuthenticated(BOOL_t *copy_tIsAuthenticated) {
-	*copy_tIsAuthenticated = local_isAuthenticated;
-}
+
 /*********************************************************************************************
  *   Function Name : SS_voidInit()
  *   Description   : This Function Used To Initiate System Devices
@@ -556,6 +554,7 @@ static void SS_voidDisplayAdminMenu() {
 	default:
 		UART_voidTxString((u8*) "Wrong Choice");
 		UART_voidTxString((u8*) "Please Try again!!");
+		SS_voidDisplayAdminMenu();
 	}
 
 }

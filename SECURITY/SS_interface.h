@@ -5,8 +5,8 @@
  *      Author: D52
  */
 
-#ifndef SECURITYSYSTEM_SS_INTERFACE_H_
-#define SECURITYSYSTEM_SS_INTERFACE_H_
+#ifndef SECURITY_SS_INTERFACE_H_
+#define SECURITY_SS_INTERFACE_H_
 
 
 
@@ -28,4 +28,4 @@
 void SS_voidInit();
 void SS_voidLogin();
 
-#endif /* SECURITYSYSTEM_SS_INTERFACE_H_ */
+#endif /* SECURITY_SS_INTERFACE_H_ */

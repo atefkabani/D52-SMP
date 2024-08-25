@@ -1,0 +1,17 @@
+MCAL/PWM/PWM_program.o MCAL/PWM/PWM_program.o: ../MCAL/PWM/PWM_program.c \
+  C:\eclipse-workspace\D52-SMP\UTILES_LIB/STD_TYPES.h \
+  C:\eclipse-workspace\D52-SMP\UTILES_LIB/BIT_MATH.h \
+  ../MCAL/PWM/PWM_config.h ../MCAL/PWM/PWM_interface.h \
+  ../MCAL/PWM/PWM_private.h ../MCAL/PWM/PWM_register.h
+
+C:\eclipse-workspace\D52-SMP\UTILES_LIB/STD_TYPES.h:
+
+C:\eclipse-workspace\D52-SMP\UTILES_LIB/BIT_MATH.h:
+
+../MCAL/PWM/PWM_config.h:
+
+../MCAL/PWM/PWM_interface.h:
+
+../MCAL/PWM/PWM_private.h:
+
+../MCAL/PWM/PWM_register.h:

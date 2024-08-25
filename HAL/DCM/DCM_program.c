@@ -11,6 +11,8 @@
 //MCAL
 #include "ADC_interface.h"
 #include "DIO_interface.h"
+#include "PWM_interface.h"
+
 //HAL
 #include "DCM_config.h"
 #include "DCM_interface.h"
@@ -109,6 +111,7 @@ void DCM_voidOff               (u8 copy_u8DCM_ID)
 		//Return Error Statement
 	}
 }
+
 void DCM_voidControlMotorSpeed (u8 copy_u8DCM_ID, u8 copy_u8MotorDirection, u8 copy_u8DesiredSpeed)
 {
 	if (((copy_u8MotorDirection==DCM_CW)||(copy_u8MotorDirection==DCM_CCW))&&((copy_u8DCM_ID==DCM1)||(copy_u8DCM_ID==DCM2))&&(copy_u8DesiredSpeed<=100))

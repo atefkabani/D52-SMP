@@ -25,6 +25,7 @@
 #include "TMR2_interface.h"
 #include "TMR2_config.h"
 #include "GI_interface.h"
+#include "UART_interface.h"
 
 static BOOL_t Local_AC_Is_ON = FALSE;
 static BOOL_t LocalIsKPD;
@@ -33,11 +34,15 @@ static void action(void);
 static void AC_voidStart(void);
 static void AC_voidStop(void);
 static void AC_voidStatus() ;
+
 /************************************************************************/
-/*       Function That Init LM35 Temperature Sensor and LCD and DCM      /
+/*       Function That Init LM35 Temperature Sensor and LCD and DCM      */
  /************************************************************************/
 void AC_voidInit(void) {
+	// initiation for Temp Sensor that depend on ADC
 	LM35_voidInit();
+
+	//Initiate DC Motor
 	DCM_voidInit(DCM1);
 	GI_voidEnable();
 	TMR2_voidInit(TMR2_Normal_mode, TMR2_Prescaler_64);
@@ -114,7 +119,7 @@ void AC_voidShowMenuBluetooth(void) {
 
 }
 /************************************************************************/
-/*      Function That Control DCM by getting Temperature From LM35       /
+/*      Function That Control DCM by getting Temperature From LM35       */
  /************************************************************************/
 
 static void AC_voidStart(void) {
@@ -134,7 +139,7 @@ static void AC_voidStop(void) {
 
 }
 /************************************************************************/
-/*        Function That Write Temperature Sensed by LM35 On LCD          /
+/*        Function That Write Temperature Sensed by LM35 On LCD          */
  /************************************************************************/
 static void AC_voidStatus( ) {
 	u8 local_u8Temp;

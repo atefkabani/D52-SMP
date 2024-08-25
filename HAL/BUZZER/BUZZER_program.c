@@ -20,6 +20,7 @@ void BUZZER_voidInit   (u8 copy_u8BuzzerPortId, u8 copy_u8BuzzerPinId)//Function
 	DIO_voidSetPinDirection(copy_u8BuzzerPortId, copy_u8BuzzerPinId,DIO_PIN_OUTPUT);
 }
 
+
 void BUZZER_voidOn     (u8 copy_u8BuzzerPortId, u8 copy_u8BuzzerPinId)//Function To Set Buzzer On
 {
 	DIO_voidSetPinValue(copy_u8BuzzerPortId, copy_u8BuzzerPinId, DIO_PIN_HIGH);

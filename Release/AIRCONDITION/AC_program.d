@@ -13,7 +13,8 @@ AIRCONDITION/AC_program.o AIRCONDITION/AC_program.o:  \
   E:\Eclipse_workspace\D52-SMP\MCAL\PWM/PWM_interface.h \
   E:\Eclipse_workspace\D52-SMP\MCAL\TMR2/TMR2_interface.h \
   E:\Eclipse_workspace\D52-SMP\MCAL\TMR2/TMR2_config.h \
-  E:\Eclipse_workspace\D52-SMP\MCAL\GI/GI_interface.h
+  E:\Eclipse_workspace\D52-SMP\MCAL\GI/GI_interface.h \
+  E:\Eclipse_workspace\D52-SMP\MCAL\UART/UART_interface.h
 
 E:\Eclipse_workspace\D52-SMP\UTILES_LIB/STD_TYPES.h:
 
@@ -42,3 +43,5 @@ E:\Eclipse_workspace\D52-SMP\MCAL\TMR2/TMR2_interface.h:
 E:\Eclipse_workspace\D52-SMP\MCAL\TMR2/TMR2_config.h:
 
 E:\Eclipse_workspace\D52-SMP\MCAL\GI/GI_interface.h:
+
+E:\Eclipse_workspace\D52-SMP\MCAL\UART/UART_interface.h:

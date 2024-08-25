@@ -12,6 +12,8 @@
 #include "BIT_MATH.h"
 /*MCAL*/
 #include "DIO_interface.h"
+#include "UART_interface.h"
+
 /*HAL*/
 #include "LED_interface.h"
 #include "KPD_interface.h"
@@ -19,7 +21,7 @@
 #include "LED_config.h"
 
 /************************************************************************/
-/*               Function That Init 5 leds and Keypad and LCD            /
+/*               Function That Init 5 leds and Keypad and LCD            */
  /************************************************************************/
 void LS_voidInit(void) {
 	LED_voidInit(LED1_PORT, LED1_PIN);
@@ -32,7 +34,7 @@ void LS_voidInit(void) {
 
 }
 /************************************************************************/
-/*         Function That Control Lightening System From Keypad           /
+/*         Function That Control Lightening System From Keypad           */
  /************************************************************************/
 void LS_voidStartKPD(void) {
 	u8 local_u8KPD1; /* Local variable to return  */
@@ -198,7 +200,7 @@ void LS_voidStartKPD(void) {
 }
 
 /************************************************************************/
-/*    Function That Control Lightening System From Virtual Screen        /
+/*    Function That Control Lightening System From Virtual Screen        */
  /************************************************************************/
 void LS_voidStartBluetooth(void) {
 	u8 local_u8RXData1; /* Local variable to return  */

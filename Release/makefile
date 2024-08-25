@@ -8,7 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include SecuritySystem/subdir.mk
+-include SECURITY/subdir.mk
 -include MCAL/UART/subdir.mk
 -include MCAL/TWI/subdir.mk
 -include MCAL/TMR2/subdir.mk

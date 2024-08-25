@@ -25,6 +25,7 @@ void AS_voidInit(void)
 	BUZZER_voidInit(ALERT_BUZZER_PORT,ALERT_BUZZER_PIN);
 	
 }
+
 void AS_voidStart(void)
 {
 	LCD_voidClear();

@@ -11,9 +11,9 @@ e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
                               e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
-                              ./SecuritySystem/SS_program.o (__do_copy_data)
+                              ./SECURITY/SS_program.o (__do_copy_data)
 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
-                              ./SecuritySystem/SS_program.o (__do_clear_bss)
+                              ./SECURITY/SS_program.o (__do_clear_bss)
 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
                               ./MCAL/TMR2/TMR2_program.o (__fixunssfsi)
 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
@@ -61,7 +61,7 @@ signature        0x00840000         0x00000400         rw !x
 Linker script and memory map
 
 LOAD e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
-LOAD ./SecuritySystem/SS_program.o
+LOAD ./SECURITY/SS_program.o
 LOAD ./MCAL/UART/UART_program.o
 LOAD ./MCAL/TWI/TWI_program.o
 LOAD ./MCAL/TMR2/TMR2_program.o
@@ -179,7 +179,7 @@ LOAD e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3e3a
+.text           0x00000000     0x3e3c
  *(.vectors)
  .vectors       0x00000000       0x54 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -252,7 +252,7 @@ LOAD e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x0000008e                __vector_16
                 0x0000008e                __vector_18
                 0x0000008e                __vector_20
- .text          0x00000092        0x0 ./SecuritySystem/SS_program.o
+ .text          0x00000092        0x0 ./SECURITY/SS_program.o
  .text          0x00000092        0x0 ./MCAL/UART/UART_program.o
  .text          0x00000092        0x0 ./MCAL/TWI/TWI_program.o
  .text          0x00000092        0x0 ./MCAL/TMR2/TMR2_program.o
@@ -314,343 +314,340 @@ LOAD e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text          0x00000dce        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
                 0x00000dce                . = ALIGN (0x2)
  *(.text.*)
- .text.SS_voidIsAuthenticated
-                0x00000dce        0xa ./SecuritySystem/SS_program.o
-                0x00000dce                SS_voidIsAuthenticated
  .text.SS_voidDisplayUserMenu
-                0x00000dd8      0x10a ./SecuritySystem/SS_program.o
+                0x00000dce      0x10a ./SECURITY/SS_program.o
  .text.SS_voidCheckUserPassword
-                0x00000ee2      0x1aa ./SecuritySystem/SS_program.o
+                0x00000ed8      0x1aa ./SECURITY/SS_program.o
  .text.SS_voidLogin
-                0x0000108c      0x444 ./SecuritySystem/SS_program.o
-                0x0000108c                SS_voidLogin
+                0x00001082      0x444 ./SECURITY/SS_program.o
+                0x00001082                SS_voidLogin
  .text.SS_voidDisplayAdminMenu
-                0x000014d0      0x6a8 ./SecuritySystem/SS_program.o
+                0x000014c6      0x6a8 ./SECURITY/SS_program.o
  .text.SS_voidInit
-                0x00001b78       0x22 ./SecuritySystem/SS_program.o
-                0x00001b78                SS_voidInit
+                0x00001b6e       0x22 ./SECURITY/SS_program.o
+                0x00001b6e                SS_voidInit
  .text.UART_voidInit
-                0x00001b9a       0x12 ./MCAL/UART/UART_program.o
-                0x00001b9a                UART_voidInit
+                0x00001b90       0x12 ./MCAL/UART/UART_program.o
+                0x00001b90                UART_voidInit
  .text.UART_voidTxChar
-                0x00001bac        0x8 ./MCAL/UART/UART_program.o
-                0x00001bac                UART_voidTxChar
+                0x00001ba2        0x8 ./MCAL/UART/UART_program.o
+                0x00001ba2                UART_voidTxChar
  .text.UART_voidTxNumber
-                0x00001bb4       0x50 ./MCAL/UART/UART_program.o
-                0x00001bb4                UART_voidTxNumber
+                0x00001baa       0x50 ./MCAL/UART/UART_program.o
+                0x00001baa                UART_voidTxNumber
  .text.UART_voidTxNewLine
-                0x00001c04       0x12 ./MCAL/UART/UART_program.o
-                0x00001c04                UART_voidTxNewLine
+                0x00001bfa       0x12 ./MCAL/UART/UART_program.o
+                0x00001bfa                UART_voidTxNewLine
  .text.UART_voidTxString
-                0x00001c16       0x22 ./MCAL/UART/UART_program.o
-                0x00001c16                UART_voidTxString
+                0x00001c0c       0x22 ./MCAL/UART/UART_program.o
+                0x00001c0c                UART_voidTxString
  .text.UART_voidRxChar
-                0x00001c38       0x10 ./MCAL/UART/UART_program.o
-                0x00001c38                UART_voidRxChar
+                0x00001c2e       0x10 ./MCAL/UART/UART_program.o
+                0x00001c2e                UART_voidRxChar
  .text.TWI_voidInit
-                0x00001c48       0x10 ./MCAL/TWI/TWI_program.o
-                0x00001c48                TWI_voidInit
+                0x00001c3e       0x10 ./MCAL/TWI/TWI_program.o
+                0x00001c3e                TWI_voidInit
  .text.TWI_voidSendStartCondition
-                0x00001c58       0x1c ./MCAL/TWI/TWI_program.o
-                0x00001c58                TWI_voidSendStartCondition
+                0x00001c4e       0x1c ./MCAL/TWI/TWI_program.o
+                0x00001c4e                TWI_voidSendStartCondition
  .text.TWI_voidSendRepeatStartCondition
-                0x00001c74       0x1c ./MCAL/TWI/TWI_program.o
-                0x00001c74                TWI_voidSendRepeatStartCondition
+                0x00001c6a       0x1c ./MCAL/TWI/TWI_program.o
+                0x00001c6a                TWI_voidSendRepeatStartCondition
  .text.TWI_voidSendStopCondition
-                0x00001c90        0xe ./MCAL/TWI/TWI_program.o
-                0x00001c90                TWI_voidSendStopCondition
+                0x00001c86        0xe ./MCAL/TWI/TWI_program.o
+                0x00001c86                TWI_voidSendStopCondition
  .text.TWI_voidSendSlaveAddressWithWrite
-                0x00001c9e       0x26 ./MCAL/TWI/TWI_program.o
-                0x00001c9e                TWI_voidSendSlaveAddressWithWrite
+                0x00001c94       0x26 ./MCAL/TWI/TWI_program.o
+                0x00001c94                TWI_voidSendSlaveAddressWithWrite
  .text.TWI_voidSendSlaveAddressWithRead
-                0x00001cc4       0x26 ./MCAL/TWI/TWI_program.o
-                0x00001cc4                TWI_voidSendSlaveAddressWithRead
+                0x00001cba       0x26 ./MCAL/TWI/TWI_program.o
+                0x00001cba                TWI_voidSendSlaveAddressWithRead
  .text.TWI_voidSendMasterByteData
-                0x00001cea       0x18 ./MCAL/TWI/TWI_program.o
-                0x00001cea                TWI_voidSendMasterByteData
+                0x00001ce0       0x18 ./MCAL/TWI/TWI_program.o
+                0x00001ce0                TWI_voidSendMasterByteData
  .text.TWI_voidReceiveMasterByteDataWithAck
-                0x00001d02       0x2c ./MCAL/TWI/TWI_program.o
-                0x00001d02                TWI_voidReceiveMasterByteDataWithAck
+                0x00001cf8       0x2c ./MCAL/TWI/TWI_program.o
+                0x00001cf8                TWI_voidReceiveMasterByteDataWithAck
  .text.TWI_voidReceiveMasterByteDataWithNAck
-                0x00001d2e       0x20 ./MCAL/TWI/TWI_program.o
-                0x00001d2e                TWI_voidReceiveMasterByteDataWithNAck
+                0x00001d24       0x20 ./MCAL/TWI/TWI_program.o
+                0x00001d24                TWI_voidReceiveMasterByteDataWithNAck
  .text.TWI_voidListenToMaster
-                0x00001d4e        0x8 ./MCAL/TWI/TWI_program.o
-                0x00001d4e                TWI_voidListenToMaster
+                0x00001d44        0x8 ./MCAL/TWI/TWI_program.o
+                0x00001d44                TWI_voidListenToMaster
  .text.TMR2_voidInit
-                0x00001d56       0x5e ./MCAL/TMR2/TMR2_program.o
-                0x00001d56                TMR2_voidInit
+                0x00001d4c       0x5e ./MCAL/TMR2/TMR2_program.o
+                0x00001d4c                TMR2_voidInit
  .text.TMR2_voidStart
-                0x00001db4       0x12 ./MCAL/TMR2/TMR2_program.o
-                0x00001db4                TMR2_voidStart
+                0x00001daa       0x12 ./MCAL/TMR2/TMR2_program.o
+                0x00001daa                TMR2_voidStart
  .text.TMR2_voidStop
-                0x00001dc6       0x14 ./MCAL/TMR2/TMR2_program.o
-                0x00001dc6                TMR2_voidStop
+                0x00001dbc       0x14 ./MCAL/TMR2/TMR2_program.o
+                0x00001dbc                TMR2_voidStop
  .text.TMR2_voidSetDelay_ms_OVR
-                0x00001dda      0x17e ./MCAL/TMR2/TMR2_program.o
-                0x00001dda                TMR2_voidSetDelay_ms_OVR
+                0x00001dd0      0x17e ./MCAL/TMR2/TMR2_program.o
+                0x00001dd0                TMR2_voidSetDelay_ms_OVR
  .text.TMR2_voidSetDelay_ms_CTC
-                0x00001f58       0x8c ./MCAL/TMR2/TMR2_program.o
-                0x00001f58                TMR2_voidSetDelay_ms_CTC
+                0x00001f4e       0x8c ./MCAL/TMR2/TMR2_program.o
+                0x00001f4e                TMR2_voidSetDelay_ms_CTC
  .text.TMR2_voidSetCallBackOVR
-                0x00001fe4        0xe ./MCAL/TMR2/TMR2_program.o
-                0x00001fe4                TMR2_voidSetCallBackOVR
+                0x00001fda        0xe ./MCAL/TMR2/TMR2_program.o
+                0x00001fda                TMR2_voidSetCallBackOVR
  .text.TMR2_voidSetCallBackCTC
-                0x00001ff2        0xe ./MCAL/TMR2/TMR2_program.o
-                0x00001ff2                TMR2_voidSetCallBackCTC
+                0x00001fe8        0xe ./MCAL/TMR2/TMR2_program.o
+                0x00001fe8                TMR2_voidSetCallBackCTC
  .text.__vector_5
-                0x00002000       0x88 ./MCAL/TMR2/TMR2_program.o
-                0x00002000                __vector_5
+                0x00001ff6       0x88 ./MCAL/TMR2/TMR2_program.o
+                0x00001ff6                __vector_5
  .text.__vector_4
-                0x00002088       0x82 ./MCAL/TMR2/TMR2_program.o
-                0x00002088                __vector_4
+                0x0000207e       0x82 ./MCAL/TMR2/TMR2_program.o
+                0x0000207e                __vector_4
  .text.TMR0_voidInit
-                0x0000210a       0x18 ./MCAL/TMR0/TMR0_program.o
-                0x0000210a                TMR0_voidInit
+                0x00002100       0x18 ./MCAL/TMR0/TMR0_program.o
+                0x00002100                TMR0_voidInit
  .text.TMR0_voidStart
-                0x00002122       0x14 ./MCAL/TMR0/TMR0_program.o
-                0x00002122                TMR0_voidStart
+                0x00002118       0x14 ./MCAL/TMR0/TMR0_program.o
+                0x00002118                TMR0_voidStart
  .text.TMR0_voidStop
-                0x00002136       0x14 ./MCAL/TMR0/TMR0_program.o
-                0x00002136                TMR0_voidStop
+                0x0000212c       0x14 ./MCAL/TMR0/TMR0_program.o
+                0x0000212c                TMR0_voidStop
  .text.TMR0_voidSetDelay_ms_UsingCTC
-                0x0000214a        0x6 ./MCAL/TMR0/TMR0_program.o
-                0x0000214a                TMR0_voidSetDelay_ms_UsingCTC
+                0x00002140        0x6 ./MCAL/TMR0/TMR0_program.o
+                0x00002140                TMR0_voidSetDelay_ms_UsingCTC
  .text.TMR0_voidSetCallBackOVF
-                0x00002150        0xe ./MCAL/TMR0/TMR0_program.o
-                0x00002150                TMR0_voidSetCallBackOVF
+                0x00002146        0xe ./MCAL/TMR0/TMR0_program.o
+                0x00002146                TMR0_voidSetCallBackOVF
  .text.TMR0_voidSetCallBackCTC
-                0x0000215e        0xe ./MCAL/TMR0/TMR0_program.o
-                0x0000215e                TMR0_voidSetCallBackCTC
+                0x00002154        0xe ./MCAL/TMR0/TMR0_program.o
+                0x00002154                TMR0_voidSetCallBackCTC
  .text.__vector_10
-                0x0000216c       0x6a ./MCAL/TMR0/TMR0_program.o
-                0x0000216c                __vector_10
+                0x00002162       0x6a ./MCAL/TMR0/TMR0_program.o
+                0x00002162                __vector_10
  .text.__vector_11
-                0x000021d6       0x70 ./MCAL/TMR0/TMR0_program.o
-                0x000021d6                __vector_11
+                0x000021cc       0x70 ./MCAL/TMR0/TMR0_program.o
+                0x000021cc                __vector_11
  .text.PWM0_voidInitChannel_0
-                0x00002246       0x1a ./MCAL/PWM/PWM_program.o
-                0x00002246                PWM0_voidInitChannel_0
+                0x0000223c       0x1a ./MCAL/PWM/PWM_program.o
+                0x0000223c                PWM0_voidInitChannel_0
  .text.PWM0_voidGenerate_PWM_Channel_0
-                0x00002260       0x1c ./MCAL/PWM/PWM_program.o
-                0x00002260                PWM0_voidGenerate_PWM_Channel_0
+                0x00002256       0x1c ./MCAL/PWM/PWM_program.o
+                0x00002256                PWM0_voidGenerate_PWM_Channel_0
  .text.PWM1_voidInitChannel_1A
-                0x0000227c       0x26 ./MCAL/PWM/PWM_program.o
-                0x0000227c                PWM1_voidInitChannel_1A
+                0x00002272       0x26 ./MCAL/PWM/PWM_program.o
+                0x00002272                PWM1_voidInitChannel_1A
  .text.PWM1_voidGenerate_PWM_Channel_1A
-                0x000022a2       0x9c ./MCAL/PWM/PWM_program.o
-                0x000022a2                PWM1_voidGenerate_PWM_Channel_1A
+                0x00002298       0x9c ./MCAL/PWM/PWM_program.o
+                0x00002298                PWM1_voidGenerate_PWM_Channel_1A
  .text.GI_voidEnable
-                0x0000233e        0x8 ./MCAL/GI/GI_program.o
-                0x0000233e                GI_voidEnable
+                0x00002334        0x8 ./MCAL/GI/GI_program.o
+                0x00002334                GI_voidEnable
  .text.GI_voidDisable
-                0x00002346        0x8 ./MCAL/GI/GI_program.o
-                0x00002346                GI_voidDisable
+                0x0000233c        0x8 ./MCAL/GI/GI_program.o
+                0x0000233c                GI_voidDisable
  .text.DIO_voidSetPinDirection
-                0x0000234e      0x10c ./MCAL/DIO/DIO_program.o
-                0x0000234e                DIO_voidSetPinDirection
+                0x00002344      0x10c ./MCAL/DIO/DIO_program.o
+                0x00002344                DIO_voidSetPinDirection
  .text.DIO_voidSetPinValue
-                0x0000245a      0x10c ./MCAL/DIO/DIO_program.o
-                0x0000245a                DIO_voidSetPinValue
+                0x00002450      0x10c ./MCAL/DIO/DIO_program.o
+                0x00002450                DIO_voidSetPinValue
  .text.DIO_voidGetPinValue
-                0x00002566       0x52 ./MCAL/DIO/DIO_program.o
-                0x00002566                DIO_voidGetPinValue
+                0x0000255c       0x52 ./MCAL/DIO/DIO_program.o
+                0x0000255c                DIO_voidGetPinValue
  .text.DIO_voidTogglePinValue
-                0x000025b8       0x72 ./MCAL/DIO/DIO_program.o
-                0x000025b8                DIO_voidTogglePinValue
+                0x000025ae       0x72 ./MCAL/DIO/DIO_program.o
+                0x000025ae                DIO_voidTogglePinValue
  .text.DIO_voidActiveIntPullUpResistance
-                0x0000262a       0x72 ./MCAL/DIO/DIO_program.o
-                0x0000262a                DIO_voidActiveIntPullUpResistance
+                0x00002620       0x72 ./MCAL/DIO/DIO_program.o
+                0x00002620                DIO_voidActiveIntPullUpResistance
  .text.DIO_voidSetPortDirection
-                0x0000269c       0x6a ./MCAL/DIO/DIO_program.o
-                0x0000269c                DIO_voidSetPortDirection
+                0x00002692       0x6a ./MCAL/DIO/DIO_program.o
+                0x00002692                DIO_voidSetPortDirection
  .text.DIO_voidSetPortValue
-                0x00002706       0x6a ./MCAL/DIO/DIO_program.o
-                0x00002706                DIO_voidSetPortValue
+                0x000026fc       0x6a ./MCAL/DIO/DIO_program.o
+                0x000026fc                DIO_voidSetPortValue
  .text.DIO_voidGetPortValue
-                0x00002770       0x32 ./MCAL/DIO/DIO_program.o
-                0x00002770                DIO_voidGetPortValue
+                0x00002766       0x32 ./MCAL/DIO/DIO_program.o
+                0x00002766                DIO_voidGetPortValue
  .text.DIO_voidTogglePortValue
-                0x000027a2       0x36 ./MCAL/DIO/DIO_program.o
-                0x000027a2                DIO_voidTogglePortValue
+                0x00002798       0x36 ./MCAL/DIO/DIO_program.o
+                0x00002798                DIO_voidTogglePortValue
  .text.DIO_voidActiveIntPortPullUpResistance
-                0x000027d8       0x2e ./MCAL/DIO/DIO_program.o
-                0x000027d8                DIO_voidActiveIntPortPullUpResistance
+                0x000027ce       0x2e ./MCAL/DIO/DIO_program.o
+                0x000027ce                DIO_voidActiveIntPortPullUpResistance
  .text.ADC_voidInit
-                0x00002806       0x2a ./MCAL/ADC/ADC_program.o
-                0x00002806                ADC_voidInit
+                0x000027fc       0x2a ./MCAL/ADC/ADC_program.o
+                0x000027fc                ADC_voidInit
  .text.ADC_voidGetDigiatlValue
-                0x00002830       0x2c ./MCAL/ADC/ADC_program.o
-                0x00002830                ADC_voidGetDigiatlValue
+                0x00002826       0x2c ./MCAL/ADC/ADC_program.o
+                0x00002826                ADC_voidGetDigiatlValue
  .text.LS_voidStartBluetooth
-                0x0000285c      0x264 ./LIGHT SYSTEM/LS_program.o
-                0x0000285c                LS_voidStartBluetooth
+                0x00002852      0x264 ./LIGHT SYSTEM/LS_program.o
+                0x00002852                LS_voidStartBluetooth
  .text.LS_voidStartKPD
-                0x00002ac0      0x432 ./LIGHT SYSTEM/LS_program.o
-                0x00002ac0                LS_voidStartKPD
+                0x00002ab6      0x432 ./LIGHT SYSTEM/LS_program.o
+                0x00002ab6                LS_voidStartKPD
  .text.LS_voidInit
-                0x00002ef2       0x2a ./LIGHT SYSTEM/LS_program.o
-                0x00002ef2                LS_voidInit
+                0x00002ee8       0x2a ./LIGHT SYSTEM/LS_program.o
+                0x00002ee8                LS_voidInit
  .text.SERVO_voidRotate0_180
-                0x00002f1c       0x34 ./HAL/SERVO/SERVO_program.o
-                0x00002f1c                SERVO_voidRotate0_180
+                0x00002f12       0x34 ./HAL/SERVO/SERVO_program.o
+                0x00002f12                SERVO_voidRotate0_180
  .text.SERVO_voidInit
-                0x00002f50       0x10 ./HAL/SERVO/SERVO_program.o
-                0x00002f50                SERVO_voidInit
+                0x00002f46       0x10 ./HAL/SERVO/SERVO_program.o
+                0x00002f46                SERVO_voidInit
  .text.RELAY_voidOff
-                0x00002f60        0xc ./HAL/RELAY/RELAY_program.o
-                0x00002f60                RELAY_voidOff
+                0x00002f56        0xc ./HAL/RELAY/RELAY_program.o
+                0x00002f56                RELAY_voidOff
  .text.RELAY_voidOn
-                0x00002f6c        0xc ./HAL/RELAY/RELAY_program.o
-                0x00002f6c                RELAY_voidOn
+                0x00002f62        0xc ./HAL/RELAY/RELAY_program.o
+                0x00002f62                RELAY_voidOn
  .text.RELAY_voidInit
-                0x00002f78        0xc ./HAL/RELAY/RELAY_program.o
-                0x00002f78                RELAY_voidInit
+                0x00002f6e        0xc ./HAL/RELAY/RELAY_program.o
+                0x00002f6e                RELAY_voidInit
  .text.LM35_voidGetTemp
-                0x00002f84       0x72 ./HAL/LM35/LM35_program.o
-                0x00002f84                LM35_voidGetTemp
+                0x00002f7a       0x72 ./HAL/LM35/LM35_program.o
+                0x00002f7a                LM35_voidGetTemp
  .text.LM35_voidInit
-                0x00002ff6        0x8 ./HAL/LM35/LM35_program.o
-                0x00002ff6                LM35_voidInit
+                0x00002fec        0x8 ./HAL/LM35/LM35_program.o
+                0x00002fec                LM35_voidInit
  .text.LED_voidLedToggle
-                0x00002ffe        0x6 ./HAL/LED/LED_program.o
-                0x00002ffe                LED_voidLedToggle
+                0x00002ff4        0x6 ./HAL/LED/LED_program.o
+                0x00002ff4                LED_voidLedToggle
  .text.LED_voidLedOff
-                0x00003004       0x1a ./HAL/LED/LED_program.o
-                0x00003004                LED_voidLedOff
+                0x00002ffa       0x1a ./HAL/LED/LED_program.o
+                0x00002ffa                LED_voidLedOff
  .text.LED_voidLedOn
-                0x0000301e       0x1a ./HAL/LED/LED_program.o
-                0x0000301e                LED_voidLedOn
+                0x00003014       0x1a ./HAL/LED/LED_program.o
+                0x00003014                LED_voidLedOn
  .text.LED_voidInit
-                0x00003038        0x8 ./HAL/LED/LED_program.o
-                0x00003038                LED_voidInit
+                0x0000302e        0x8 ./HAL/LED/LED_program.o
+                0x0000302e                LED_voidInit
  .text.PRV_voidWriteHalfPort
-                0x00003040       0x40 ./HAL/LCD/LCD_program.o
+                0x00003036       0x40 ./HAL/LCD/LCD_program.o
  .text.LCD_voidDisplayChar
-                0x00003080       0x6c ./HAL/LCD/LCD_program.o
-                0x00003080                LCD_voidDisplayChar
+                0x00003076       0x6c ./HAL/LCD/LCD_program.o
+                0x00003076                LCD_voidDisplayChar
  .text.LCD_voidDisplayNumber
-                0x000030ec       0xd8 ./HAL/LCD/LCD_program.o
-                0x000030ec                LCD_voidDisplayNumber
+                0x000030e2       0xd8 ./HAL/LCD/LCD_program.o
+                0x000030e2                LCD_voidDisplayNumber
  .text.LCD_voidDisplayString
-                0x000031c4       0x2a ./HAL/LCD/LCD_program.o
-                0x000031c4                LCD_voidDisplayString
+                0x000031ba       0x2a ./HAL/LCD/LCD_program.o
+                0x000031ba                LCD_voidDisplayString
  .text.LCD_voidSendCommand
-                0x000031ee       0x6c ./HAL/LCD/LCD_program.o
-                0x000031ee                LCD_voidSendCommand
+                0x000031e4       0x6c ./HAL/LCD/LCD_program.o
+                0x000031e4                LCD_voidSendCommand
  .text.LCD_voidGoToSpecificPosition
-                0x0000325a       0x1e ./HAL/LCD/LCD_program.o
-                0x0000325a                LCD_voidGoToSpecificPosition
+                0x00003250       0x1e ./HAL/LCD/LCD_program.o
+                0x00003250                LCD_voidGoToSpecificPosition
  .text.LCD_voidShift
-                0x00003278       0x2a ./HAL/LCD/LCD_program.o
-                0x00003278                LCD_voidShift
+                0x0000326e       0x2a ./HAL/LCD/LCD_program.o
+                0x0000326e                LCD_voidShift
  .text.LCD_voidClear
-                0x000032a2       0x10 ./HAL/LCD/LCD_program.o
-                0x000032a2                LCD_voidClear
+                0x00003298       0x10 ./HAL/LCD/LCD_program.o
+                0x00003298                LCD_voidClear
  .text.LCD_voidInit
-                0x000032b2       0xc8 ./HAL/LCD/LCD_program.o
-                0x000032b2                LCD_voidInit
+                0x000032a8       0xc8 ./HAL/LCD/LCD_program.o
+                0x000032a8                LCD_voidInit
  .text.KPD_voidGetValue
-                0x0000337a      0x190 ./HAL/KPD/KPD_program.o
-                0x0000337a                KPD_voidGetValue
+                0x00003370      0x190 ./HAL/KPD/KPD_program.o
+                0x00003370                KPD_voidGetValue
  .text.KPD_voidInit
-                0x0000350a       0x86 ./HAL/KPD/KPD_program.o
-                0x0000350a                KPD_voidInit
+                0x00003500       0x86 ./HAL/KPD/KPD_program.o
+                0x00003500                KPD_voidInit
  .text.EEPROM_voidReadByte
-                0x00003590       0x4c ./HAL/EEPROM/EEPROM_program.o
-                0x00003590                EEPROM_voidReadByte
+                0x00003586       0x4c ./HAL/EEPROM/EEPROM_program.o
+                0x00003586                EEPROM_voidReadByte
  .text.EEPROM_voidWriteByte
-                0x000035dc       0x38 ./HAL/EEPROM/EEPROM_program.o
-                0x000035dc                EEPROM_voidWriteByte
+                0x000035d2       0x38 ./HAL/EEPROM/EEPROM_program.o
+                0x000035d2                EEPROM_voidWriteByte
  .text.EEPROM_voidInit
-                0x00003614        0x6 ./HAL/EEPROM/EEPROM_program.o
-                0x00003614                EEPROM_voidInit
+                0x0000360a        0x6 ./HAL/EEPROM/EEPROM_program.o
+                0x0000360a                EEPROM_voidInit
  .text.DCM_voidInit
-                0x0000361a       0x4e ./HAL/DCM/DCM_program.o
-                0x0000361a                DCM_voidInit
+                0x00003610       0x4e ./HAL/DCM/DCM_program.o
+                0x00003610                DCM_voidInit
  .text.DCM_voidControlMotorSpeed
-                0x00003668       0xc6 ./HAL/DCM/DCM_program.o
-                0x00003668                DCM_voidControlMotorSpeed
+                0x0000365e       0xc4 ./HAL/DCM/DCM_program.o
+                0x0000365e                DCM_voidControlMotorSpeed
  .text.DCM_voidOff
-                0x0000372e       0x4e ./HAL/DCM/DCM_program.o
-                0x0000372e                DCM_voidOff
+                0x00003722       0x4e ./HAL/DCM/DCM_program.o
+                0x00003722                DCM_voidOff
  .text.DCM_voidOn
-                0x0000377c       0x9e ./HAL/DCM/DCM_program.o
-                0x0000377c                DCM_voidOn
+                0x00003770       0x9e ./HAL/DCM/DCM_program.o
+                0x00003770                DCM_voidOn
  .text.BUZZER_voidToggle
-                0x0000381a        0x6 ./HAL/BUZZER/BUZZER_program.o
-                0x0000381a                BUZZER_voidToggle
+                0x0000380e        0x6 ./HAL/BUZZER/BUZZER_program.o
+                0x0000380e                BUZZER_voidToggle
  .text.BUZZER_voidOff
-                0x00003820        0x8 ./HAL/BUZZER/BUZZER_program.o
-                0x00003820                BUZZER_voidOff
+                0x00003814        0x8 ./HAL/BUZZER/BUZZER_program.o
+                0x00003814                BUZZER_voidOff
  .text.BUZZER_voidOn
-                0x00003828        0x8 ./HAL/BUZZER/BUZZER_program.o
-                0x00003828                BUZZER_voidOn
+                0x0000381c        0x8 ./HAL/BUZZER/BUZZER_program.o
+                0x0000381c                BUZZER_voidOn
  .text.BUZZER_voidInit
-                0x00003830        0x8 ./HAL/BUZZER/BUZZER_program.o
-                0x00003830                BUZZER_voidInit
+                0x00003824        0x8 ./HAL/BUZZER/BUZZER_program.o
+                0x00003824                BUZZER_voidInit
  .text.DOOR_voidClose
-                0x00003838        0x8 ./Door/DOOR_program.o
-                0x00003838                DOOR_voidClose
+                0x0000382c        0x8 ./Door/DOOR_program.o
+                0x0000382c                DOOR_voidClose
  .text.DOOR_voidOpen
-                0x00003840        0x8 ./Door/DOOR_program.o
-                0x00003840                DOOR_voidOpen
+                0x00003834        0x8 ./Door/DOOR_program.o
+                0x00003834                DOOR_voidOpen
  .text.DOOR_voidInit
-                0x00003848       0x8c ./Door/DOOR_program.o
-                0x00003848                DOOR_voidInit
+                0x0000383c       0x9e ./Door/DOOR_program.o
+                0x0000383c                DOOR_voidInit
  .text.DIMMER_voidStartBluetooth
-                0x000038d4       0x9a ./DIMMER/DIMMER_program.o
-                0x000038d4                DIMMER_voidStartBluetooth
+                0x000038da       0x9a ./DIMMER/DIMMER_program.o
+                0x000038da                DIMMER_voidStartBluetooth
  .text.DIMMER_voidStartKPD
-                0x0000396e       0xb6 ./DIMMER/DIMMER_program.o
-                0x0000396e                DIMMER_voidStartKPD
+                0x00003974       0xb6 ./DIMMER/DIMMER_program.o
+                0x00003974                DIMMER_voidStartKPD
  .text.DIMMER_voidInit
-                0x00003a24       0x14 ./DIMMER/DIMMER_program.o
-                0x00003a24                DIMMER_voidInit
+                0x00003a2a       0x14 ./DIMMER/DIMMER_program.o
+                0x00003a2a                DIMMER_voidInit
  .text.AS_voidStart
-                0x00003a38       0x34 ./ALERT SYSTEM/AS_program.o
-                0x00003a38                AS_voidStart
+                0x00003a3e       0x34 ./ALERT SYSTEM/AS_program.o
+                0x00003a3e                AS_voidStart
  .text.AS_voidInit
-                0x00003a6c       0x12 ./ALERT SYSTEM/AS_program.o
-                0x00003a6c                AS_voidInit
+                0x00003a72       0x12 ./ALERT SYSTEM/AS_program.o
+                0x00003a72                AS_voidInit
  .text.AC_voidStatus
-                0x00003a7e       0xb4 ./AIRCONDITION/AC_program.o
+                0x00003a84       0xb0 ./AIRCONDITION/AC_program.o
  .text.AC_voidStart
-                0x00003b32       0x10 ./AIRCONDITION/AC_program.o
+                0x00003b34       0x10 ./AIRCONDITION/AC_program.o
  .text.AC_voidStop
-                0x00003b42       0x14 ./AIRCONDITION/AC_program.o
+                0x00003b44       0x14 ./AIRCONDITION/AC_program.o
  .text.AC_voidShowMenuKPD
-                0x00003b56       0xa2 ./AIRCONDITION/AC_program.o
-                0x00003b56                AC_voidShowMenuKPD
+                0x00003b58       0xa2 ./AIRCONDITION/AC_program.o
+                0x00003b58                AC_voidShowMenuKPD
  .text.AC_voidShowMenuBluetooth
-                0x00003bf8       0xa8 ./AIRCONDITION/AC_program.o
-                0x00003bf8                AC_voidShowMenuBluetooth
+                0x00003bfa       0xa8 ./AIRCONDITION/AC_program.o
+                0x00003bfa                AC_voidShowMenuBluetooth
  .text.AC_voidInit
-                0x00003ca0       0x28 ./AIRCONDITION/AC_program.o
-                0x00003ca0                AC_voidInit
- .text.action   0x00003cc8       0x34 ./AIRCONDITION/AC_program.o
- .text.main     0x00003cfc        0xa ./main.o
-                0x00003cfc                main
- .text.libgcc   0x00003d06       0x3e e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                0x00003d06                __mulsi3
- .text.libgcc   0x00003d44       0x18 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
-                0x00003d44                __udivmodqi4
- .text.libgcc   0x00003d5c       0x28 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00003d5c                __udivmodhi4
- .text.libgcc   0x00003d84       0x44 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00003d84                __udivmodsi4
- .text.libgcc   0x00003dc8        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00003dc8        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00003dc8        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00003dc8       0x38 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00003dc8                __prologue_saves__
- .text.libgcc   0x00003e00       0x36 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00003e00                __epilogue_restores__
-                0x00003e36                . = ALIGN (0x2)
+                0x00003ca2       0x28 ./AIRCONDITION/AC_program.o
+                0x00003ca2                AC_voidInit
+ .text.action   0x00003cca       0x34 ./AIRCONDITION/AC_program.o
+ .text.main     0x00003cfe        0xa ./main.o
+                0x00003cfe                main
+ .text.libgcc   0x00003d08       0x3e e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00003d08                __mulsi3
+ .text.libgcc   0x00003d46       0x18 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                0x00003d46                __udivmodqi4
+ .text.libgcc   0x00003d5e       0x28 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00003d5e                __udivmodhi4
+ .text.libgcc   0x00003d86       0x44 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00003d86                __udivmodsi4
+ .text.libgcc   0x00003dca        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00003dca        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00003dca        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00003dca       0x38 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00003dca                __prologue_saves__
+ .text.libgcc   0x00003e02       0x36 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00003e02                __epilogue_restores__
+                0x00003e38                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00003e36        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00003e36                exit
-                0x00003e36                _exit
+ .fini9         0x00003e38        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00003e38                exit
+                0x00003e38                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -669,15 +666,15 @@ LOAD e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00003e36        0x4 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00003e38        0x4 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003e3a                _etext = .
+                0x00003e3c                _etext = .
 
-.data           0x00800060      0x590 load address 0x00003e3a
+.data           0x00800060      0x5b0 load address 0x00003e3c
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .data          0x00800060      0x244 ./SecuritySystem/SS_program.o
+ .data          0x00800060      0x244 ./SECURITY/SS_program.o
  .data          0x008002a4        0x0 ./MCAL/UART/UART_program.o
  .data          0x008002a4        0x0 ./MCAL/TWI/TWI_program.o
  .data          0x008002a4        0x0 ./MCAL/TMR2/TMR2_program.o
@@ -696,148 +693,148 @@ LOAD e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .data          0x008003a2        0x0 ./HAL/EEPROM/EEPROM_program.o
  .data          0x008003a2        0x0 ./HAL/DCM/DCM_program.o
  .data          0x008003a2        0x0 ./HAL/BUZZER/BUZZER_program.o
- .data          0x008003a2       0x34 ./Door/DOOR_program.o
- .data          0x008003d6       0x80 ./DIMMER/DIMMER_program.o
- .data          0x00800456        0xc ./ALERT SYSTEM/AS_program.o
- .data          0x00800462       0x73 ./AIRCONDITION/AC_program.o
- .data          0x008004d5        0x0 ./main.o
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_le_sf.o)
- .data          0x008004d5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .data          0x008004d5        0x8 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
-                0x008004d5                __thenan_sf
- .data          0x008004dd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .data          0x008004dd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .data          0x008004dd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .data          0x008004dd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .data          0x008004dd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .data          0x008004dd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .data          0x008004dd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .data          0x008004dd      0x100 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
-                0x008004dd                __clz_tab
+ .data          0x008003a2       0x54 ./Door/DOOR_program.o
+ .data          0x008003f6       0x80 ./DIMMER/DIMMER_program.o
+ .data          0x00800476        0xc ./ALERT SYSTEM/AS_program.o
+ .data          0x00800482       0x73 ./AIRCONDITION/AC_program.o
+ .data          0x008004f5        0x0 ./main.o
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_le_sf.o)
+ .data          0x008004f5        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .data          0x008004f5        0x8 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+                0x008004f5                __thenan_sf
+ .data          0x008004fd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .data          0x008004fd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .data          0x008004fd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .data          0x008004fd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .data          0x008004fd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .data          0x008004fd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .data          0x008004fd        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .data          0x008004fd      0x100 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+                0x008004fd                __clz_tab
  *(.data*)
  *(.rodata)
  *(.rodata*)
  .rodata.C.2.1250
-                0x008005dd        0xc ./HAL/KPD/KPD_program.o
+                0x008005fd        0xc ./HAL/KPD/KPD_program.o
  .rodata.C.1.1249
-                0x008005e9        0x3 ./HAL/KPD/KPD_program.o
+                0x00800609        0x3 ./HAL/KPD/KPD_program.o
  .rodata.C.0.1248
-                0x008005ec        0x3 ./HAL/KPD/KPD_program.o
+                0x0080060c        0x3 ./HAL/KPD/KPD_program.o
  *(.gnu.linkonce.d*)
-                0x008005f0                . = ALIGN (0x2)
- *fill*         0x008005ef        0x1 00
-                0x008005f0                _edata = .
-                0x008005f0                PROVIDE (__data_end, .)
+                0x00800610                . = ALIGN (0x2)
+ *fill*         0x0080060f        0x1 00
+                0x00800610                _edata = .
+                0x00800610                PROVIDE (__data_end, .)
 
-.bss            0x008005f0       0x1c
-                0x008005f0                PROVIDE (__bss_start, .)
+.bss            0x00800610       0x1c
+                0x00800610                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x008005f0        0x0 ./SecuritySystem/SS_program.o
- .bss           0x008005f0        0x0 ./MCAL/UART/UART_program.o
- .bss           0x008005f0        0x0 ./MCAL/TWI/TWI_program.o
- .bss           0x008005f0        0x0 ./MCAL/TMR2/TMR2_program.o
- .bss           0x008005f0        0x0 ./MCAL/TMR0/TMR0_program.o
- .bss           0x008005f0        0x0 ./MCAL/PWM/PWM_program.o
- .bss           0x008005f0        0x0 ./MCAL/GI/GI_program.o
- .bss           0x008005f0        0x0 ./MCAL/DIO/DIO_program.o
- .bss           0x008005f0        0x0 ./MCAL/ADC/ADC_program.o
- .bss           0x008005f0        0x0 ./LIGHT SYSTEM/LS_program.o
- .bss           0x008005f0        0x0 ./HAL/SERVO/SERVO_program.o
- .bss           0x008005f0        0x0 ./HAL/RELAY/RELAY_program.o
- .bss           0x008005f0        0x0 ./HAL/LM35/LM35_program.o
- .bss           0x008005f0        0x0 ./HAL/LED/LED_program.o
- .bss           0x008005f0        0x0 ./HAL/LCD/LCD_program.o
- .bss           0x008005f0        0x0 ./HAL/KPD/KPD_program.o
- .bss           0x008005f0        0x0 ./HAL/EEPROM/EEPROM_program.o
- .bss           0x008005f0        0x0 ./HAL/DCM/DCM_program.o
- .bss           0x008005f0        0x0 ./HAL/BUZZER/BUZZER_program.o
- .bss           0x008005f0        0x0 ./Door/DOOR_program.o
- .bss           0x008005f0        0x0 ./DIMMER/DIMMER_program.o
- .bss           0x008005f0        0x0 ./ALERT SYSTEM/AS_program.o
- .bss           0x008005f0        0x0 ./AIRCONDITION/AC_program.o
- .bss           0x008005f0        0x0 ./main.o
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_le_sf.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x008005f0        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x00800610        0x0 ./SECURITY/SS_program.o
+ .bss           0x00800610        0x0 ./MCAL/UART/UART_program.o
+ .bss           0x00800610        0x0 ./MCAL/TWI/TWI_program.o
+ .bss           0x00800610        0x0 ./MCAL/TMR2/TMR2_program.o
+ .bss           0x00800610        0x0 ./MCAL/TMR0/TMR0_program.o
+ .bss           0x00800610        0x0 ./MCAL/PWM/PWM_program.o
+ .bss           0x00800610        0x0 ./MCAL/GI/GI_program.o
+ .bss           0x00800610        0x0 ./MCAL/DIO/DIO_program.o
+ .bss           0x00800610        0x0 ./MCAL/ADC/ADC_program.o
+ .bss           0x00800610        0x0 ./LIGHT SYSTEM/LS_program.o
+ .bss           0x00800610        0x0 ./HAL/SERVO/SERVO_program.o
+ .bss           0x00800610        0x0 ./HAL/RELAY/RELAY_program.o
+ .bss           0x00800610        0x0 ./HAL/LM35/LM35_program.o
+ .bss           0x00800610        0x0 ./HAL/LED/LED_program.o
+ .bss           0x00800610        0x0 ./HAL/LCD/LCD_program.o
+ .bss           0x00800610        0x0 ./HAL/KPD/KPD_program.o
+ .bss           0x00800610        0x0 ./HAL/EEPROM/EEPROM_program.o
+ .bss           0x00800610        0x0 ./HAL/DCM/DCM_program.o
+ .bss           0x00800610        0x0 ./HAL/BUZZER/BUZZER_program.o
+ .bss           0x00800610        0x0 ./Door/DOOR_program.o
+ .bss           0x00800610        0x0 ./DIMMER/DIMMER_program.o
+ .bss           0x00800610        0x0 ./ALERT SYSTEM/AS_program.o
+ .bss           0x00800610        0x0 ./AIRCONDITION/AC_program.o
+ .bss           0x00800610        0x0 ./main.o
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_le_sf.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x00800610        0x0 e:/eclipse/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
  *(.bss*)
  .bss.local_loggedUser
-                0x008005f0        0x1 ./SecuritySystem/SS_program.o
+                0x00800610        0x1 ./SECURITY/SS_program.o
  .bss.local_isAuthenticated
-                0x008005f1        0x1 ./SecuritySystem/SS_program.o
+                0x00800611        0x1 ./SECURITY/SS_program.o
  .bss.PRV_pFunCallBackCTC
-                0x008005f2        0x2 ./MCAL/TMR2/TMR2_program.o
+                0x00800612        0x2 ./MCAL/TMR2/TMR2_program.o
  .bss.PRV_u16No_Of_Interrupts_CTC
-                0x008005f4        0x2 ./MCAL/TMR2/TMR2_program.o
+                0x00800614        0x2 ./MCAL/TMR2/TMR2_program.o
  .bss.counter.1356
-                0x008005f6        0x2 ./MCAL/TMR2/TMR2_program.o
+                0x00800616        0x2 ./MCAL/TMR2/TMR2_program.o
  .bss.PRV_pFunCallBackOVR
-                0x008005f8        0x2 ./MCAL/TMR2/TMR2_program.o
+                0x00800618        0x2 ./MCAL/TMR2/TMR2_program.o
  .bss.PRV_u16NoOfOVF
-                0x008005fa        0x2 ./MCAL/TMR2/TMR2_program.o
+                0x0080061a        0x2 ./MCAL/TMR2/TMR2_program.o
  .bss.PRV_u8PreloadValue
-                0x008005fc        0x1 ./MCAL/TMR2/TMR2_program.o
+                0x0080061c        0x1 ./MCAL/TMR2/TMR2_program.o
  .bss.local_u16OVFCounter.1344
-                0x008005fd        0x2 ./MCAL/TMR2/TMR2_program.o
+                0x0080061d        0x2 ./MCAL/TMR2/TMR2_program.o
  .bss.PRV_tClockSelect
-                0x008005ff        0x1 ./MCAL/TMR2/TMR2_program.o
+                0x0080061f        0x1 ./MCAL/TMR2/TMR2_program.o
  .bss.PRV_pFunCallBackOVF
-                0x00800600        0x2 ./MCAL/TMR0/TMR0_program.o
+                0x00800620        0x2 ./MCAL/TMR0/TMR0_program.o
  .bss.local_u16OVFCounter.1268
-                0x00800602        0x2 ./MCAL/TMR0/TMR0_program.o
+                0x00800622        0x2 ./MCAL/TMR0/TMR0_program.o
  .bss.PRV_pFunCallBackCTC
-                0x00800604        0x2 ./MCAL/TMR0/TMR0_program.o
+                0x00800624        0x2 ./MCAL/TMR0/TMR0_program.o
  .bss.local_u16ctcCounter.1258
-                0x00800606        0x2 ./MCAL/TMR0/TMR0_program.o
+                0x00800626        0x2 ./MCAL/TMR0/TMR0_program.o
  .bss.PRV_u16ctcCounter
-                0x00800608        0x2 ./MCAL/TMR0/TMR0_program.o
+                0x00800628        0x2 ./MCAL/TMR0/TMR0_program.o
  .bss.Local_AC_Is_ON
-                0x0080060a        0x1 ./AIRCONDITION/AC_program.o
+                0x0080062a        0x1 ./AIRCONDITION/AC_program.o
  .bss.LocalIsKPD
-                0x0080060b        0x1 ./AIRCONDITION/AC_program.o
+                0x0080062b        0x1 ./AIRCONDITION/AC_program.o
  *(COMMON)
-                0x0080060c                PROVIDE (__bss_end, .)
-                0x00003e3a                __data_load_start = LOADADDR (.data)
-                0x000043ca                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0080062c                PROVIDE (__bss_end, .)
+                0x00003e3c                __data_load_start = LOADADDR (.data)
+                0x000043ec                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080060c        0x0
-                0x0080060c                PROVIDE (__noinit_start, .)
+.noinit         0x0080062c        0x0
+                0x0080062c                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0080060c                PROVIDE (__noinit_end, .)
-                0x0080060c                _end = .
-                0x0080060c                PROVIDE (__heap_start, .)
+                0x0080062c                PROVIDE (__noinit_end, .)
+                0x0080062c                _end = .
+                0x0080062c                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)

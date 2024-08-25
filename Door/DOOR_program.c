@@ -14,6 +14,7 @@
 /*HAL*/
 #include "LCD_interface.h"
 
+
 /*MCAL*/
 #include "UART_interface.h"
 
@@ -36,12 +37,17 @@ void DOOR_voidInit(void) {
 		LCD_voidClear();
 		LCD_voidDisplayString((u8*) "Door Opened");
 		UART_voidTxString((u8*)  "Door Opened");
-	} else {
+	} else if (local_u8RxData == '2') {
 
 		DOOR_voidClose();
 		LCD_voidClear();
 		LCD_voidDisplayString((u8*) "Door Closed");
 		UART_voidTxString((u8*) "Door Closed");
+	}else {
+
+		UART_voidTxString((u8*) "Wrong Choice");
+		UART_voidTxString((u8*) "Please Try again!!");
+
 	}
 	_delay_ms(3000);
 	LCD_voidClear();

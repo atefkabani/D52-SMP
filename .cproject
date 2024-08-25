@@ -39,6 +39,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/HAL/LM35}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/HAL/RELAY}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/HAL/SERVO}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/HAL/EEPROM}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/ADC}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/DIO}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/GI}&quot;"/>
@@ -46,7 +47,14 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/TMR0}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/TWI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/UART}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/TMR2}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/UTILES_LIB}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/SECURITY}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/AIRCONDITION}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ALERT SYSTEM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/DIMMER}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Door}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/LIGHT SYSTEM}&quot;"/>
 								</option>
 								<inputType id="de.innot.avreclipse.compiler.winavr.input.486425594" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
 							</tool>
@@ -137,6 +145,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/AIRCONDITION}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ALERT SYSTEM}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/DIMMER}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/SECURITY}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Door}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/LIGHT SYSTEM}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/HAL/BUZZER}&quot;"/>
@@ -154,9 +163,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/TMR0}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/TWI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/UART}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/SecuritySystem}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/TMR2}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/MCAL/TMR1}&quot;"/>
 								</option>
 								<inputType id="de.innot.avreclipse.compiler.winavr.input.989381748" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
 							</tool>
@@ -197,6 +204,7 @@
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.debug.251949253;de.innot.avreclipse.configuration.app.debug.251949253.;de.innot.avreclipse.tool.compiler.winavr.app.debug.1545773159;de.innot.avreclipse.compiler.winavr.input.486425594">
@@ -206,5 +214,4 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>

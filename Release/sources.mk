@@ -43,6 +43,6 @@ MCAL/TMR0 \
 MCAL/TMR2 \
 MCAL/TWI \
 MCAL/UART \
-SecuritySystem \
+SECURITY \
 . \
 

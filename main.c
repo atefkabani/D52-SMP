@@ -8,7 +8,9 @@
 #include "STD_TYPES.h"
 #include "BIT_MATH.h"
 
+
 #include "SS_interface.h"
+
 
 int main(void) {
 
@@ -18,7 +20,9 @@ int main(void) {
 	/*enable users to login*/
 	SS_voidLogin();
 
-	while (1)
-		;
+
+
+	while (1);
+
 
 }
